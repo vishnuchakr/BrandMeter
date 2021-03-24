@@ -6,10 +6,14 @@ class Metrics extends React.Component {
     super(props);
   }
   render() {
+    console.log(this.props.status);
     return (
       <div
         className="metric"
-        style={{ border: this.props.sentimentStatus ? "red" : "green" }}
+        style={{
+          borderStyle: "solid",
+          borderColor: this.props.status === "0" ? "red" : "green",
+        }}
       ></div>
     );
   }

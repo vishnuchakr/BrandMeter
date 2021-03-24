@@ -8,23 +8,24 @@ class App extends React.Component {
     super();
     this.state = {
       sentimentStatus: false,
-      channelEngagement: false,
-      newCustomerLeads: true,
-      shareOfVoice: true,
-      mentions: true,
+      channelStatus: false,
+      leadsStatus: true,
+      sovStatus: true,
+      mentionsStatus: true,
     };
   }
 
   render() {
     return (
       <div className="App">
-        <p>hi</p>
-        <div className="row">
-          <Metrics status={this.sentimentStatus} />
-          <Metrics />
-          <Metrics />
-          <Metrics />
-          <Metrics />
+        <div className="header"></div>
+        <div className="middle"></div>
+        <div className="footer">
+          <Metrics status="0" />
+          <Metrics status="1" />
+          <Metrics status="1" />
+          <Metrics status="0" />
+          <Metrics status="0" />
         </div>
       </div>
     );
