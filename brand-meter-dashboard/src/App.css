@@ -1,24 +1,124 @@
 .App {
-  text-align: center;
+  height: 100vh;
+  display: flex;
+
+  /* Direction of the items, can be row or column */
+  flex-direction: column;
 }
 
 .header {
-  width: 100%;
   height: 75px;
   background-color: white;
+  color: #0074b1;
+  font-family: Inter;
+  font-weight: 300;
+  display: flex;
+  justify-content: left;
+  align-content: center;
+  flex-direction: row;
 }
 
-.middle {
-  width: 100%;
+.header > img {
+}
+
+.title {
+  font-family: Inter;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 51px;
+  letter-spacing: 0em;
+  margin-top: 10px;
+  padding-top: 0;
+  margin-left: 450px;
+}
+
+.metric-card1 {
+  border: 3px solid #0db20b;
+}
+
+.metric-card2 {
+  border: 3px solid #d81717;
+}
+.metric-card3 {
+  border: 3px solid #d81717;
+}
+.metric-card4 {
+  border: 3px solid #0db20b;
+}
+.metric-card5 {
+  border: 3px solid #0db20b;
+}
+
+.main {
   height: 350px;
   background-color: #0074b1;
 }
 
-.footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.rating-good {
+  display: block;
+  background-color: #0db20b;
+  width: 100px;
+  height: 30px;
+  margin-left: 50px;
+}
+
+.rating-bad {
+  display: block;
+  background-color: #d81717;
+  width: 100px;
+  height: 30px;
+  margin-left: 50px;
+}
+
+.rating-text {
+  color: white;
+  font-weight: 1000;
+  padding-top: 5px;
+}
+
+.score {
+  color: #016ba5;
+  font-size: 56px;
+  padding-top: 0;
+  margin-top: 5px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  font-weight: 200;
+}
+
+.card-name {
+  font-size: 18px;
+  width: 150px;
   position: absolute;
-  bottom: 30px;
-  width: 100%;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.card-description {
+  font-size: 12px;
+  width: 150px;
+  color: gray;
+  position: absolute;
+  margin-top: 50px;
+}
+
+.footer {
+  height: 400px;
+  background-color: #f4f2f3;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.footer > div {
+  display: inline-block;
+  display: -moz-inline-box;
+  *display: inline; /* For IE7 */
+  zoom: 1; /* Trigger hasLayout */
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 30px;
+  width: 200px;
+  height: 325px;
 }
