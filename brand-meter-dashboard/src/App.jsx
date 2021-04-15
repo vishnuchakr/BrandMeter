@@ -8,6 +8,7 @@ import voiceActivate from "@iconify/icons-carbon/voice-activate";
 import moneyIcon from "@iconify/icons-cil/money";
 import bellOutlineBadged from "@iconify/icons-clarity/bell-outline-badged";
 import globalIcon from "@iconify/icons-si-glyph/global";
+import Meter from "./Meter";
 
 class App extends React.Component {
   render() {
@@ -17,7 +18,9 @@ class App extends React.Component {
           <img src={sbux} alt="sbux"></img>
           <p className="title">BrandMeter Dashboard</p>
         </div>
-        <div className="main"></div>
+        <div className="main">
+          <Meter />
+        </div>
         <div className="footer">
           <div className="metric-card1">
             <div className="rating-good">

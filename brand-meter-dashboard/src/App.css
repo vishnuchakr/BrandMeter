@@ -50,8 +50,10 @@
 }
 
 .main {
-  height: 350px;
+  height: 325px;
   background-color: #0074b1;
+  text-align: center;
+  padding-top: 30px;
 }
 
 .rating-good {
