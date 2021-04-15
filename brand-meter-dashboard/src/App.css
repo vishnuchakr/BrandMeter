@@ -34,19 +34,24 @@
 
 .metric-card1 {
   border: 3px solid #0db20b;
+  cursor: pointer;
 }
 
 .metric-card2 {
   border: 3px solid #d81717;
+  cursor: pointer;
 }
 .metric-card3 {
   border: 3px solid #d81717;
+  cursor: pointer;
 }
 .metric-card4 {
   border: 3px solid #0db20b;
+  cursor: pointer;
 }
 .metric-card5 {
   border: 3px solid #0db20b;
+  cursor: pointer;
 }
 
 .main {
