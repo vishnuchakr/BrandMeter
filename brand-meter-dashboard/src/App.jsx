@@ -14,7 +14,7 @@ import TableauReport from "tableau-react-embed";
 import Button from "react-bootstrap/Button";
 
 const options = {
-  height: 900,
+  height: 800,
   width: 1000,
   hideTabs: true,
   hideToolbar: true,
@@ -44,19 +44,19 @@ class App extends React.Component {
     this.setState({ homepage: false });
   }
   handleClick2() {
-    this.setState({ page1: true });
+    this.setState({ page2: true });
     this.setState({ homepage: false });
   }
   handleClick3() {
-    this.setState({ page1: true });
+    this.setState({ page3: true });
     this.setState({ homepage: false });
   }
   handleClick4() {
-    this.setState({ page1: true });
+    this.setState({ page4: true });
     this.setState({ homepage: false });
   }
   handleClick5() {
-    this.setState({ page1: true });
+    this.setState({ page5: true });
     this.setState({ homepage: false });
   }
 
@@ -121,7 +121,7 @@ class App extends React.Component {
                 </p>
               </div>
             </div>
-            <div className="metric-card3" onClick={this.handleClick3}>
+            <div className="metric-card3">
               <div className="rating-bad">
                 <p className="rating-text">POOR</p>
                 <Icon
@@ -138,7 +138,7 @@ class App extends React.Component {
                 </p>
               </div>
             </div>
-            <div className="metric-card4" onClick={this.handleClick4}>
+            <div className="metric-card4">
               <div className="rating-good">
                 <p className="rating-text">FAIR</p>
                 <Icon
@@ -155,7 +155,7 @@ class App extends React.Component {
                 </p>
               </div>
             </div>
-            <div className="metric-card5" onClick={this.handleClick5}>
+            <div className="metric-card5">
               <div className="rating-good">
                 <p className="rating-text">EXCELLENT</p>
                 <Icon
@@ -167,7 +167,7 @@ class App extends React.Component {
                   Net Promoter Score
                 </p>
                 <p className="card-description" style={{ left: "1210px" }}>
-                  Compares the percentage of detractors (thos who would not
+                  Compares the percentage of detractors (those who would not
                   recommend a brand) to promoters (those who would recommend a
                   brand.)
                 </p>
@@ -178,34 +178,40 @@ class App extends React.Component {
       );
     } else if (this.state.page1) {
       return (
-        <div style={{ display: "flex", alignItems: "center" }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "column",
+          }}
+        >
+          <Button variant="primary" onClick={this.handleBackClick}>
+            Back
+          </Button>{" "}
           <TableauReport
-            url="https://public.tableau.com/views/prootypt/Dashboard1?:language=en&:display_count=y&:origin=viz_share_link"
+            url="https://public.tableau.com/views/SocialMediaDashboard_16185394756440/Dashboard1?:language=en&:display_count=y&:origin=viz_share_link"
             options={options}
           />
-          <Button variant="primary" onClick={this.handleBackClick}>
-            Primary
-          </Button>{" "}
         </div>
       );
     } else if (this.state.page2) {
       return (
-        <div style={{ display: "flex", alignItems: "center" }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "column",
+          }}
+        >
+          <Button variant="primary" onClick={this.handleBackClick}>
+            Back
+          </Button>{" "}
           <TableauReport
             url="https://public.tableau.com/views/prootypt/Dashboard1?:language=en&:display_count=y&:origin=viz_share_link"
             options={options}
           />
-          <Button variant="primary" onClick={this.handleBackClick}>
-            Primary
-          </Button>{" "}
         </div>
       );
-    } else {
-      <div style={{ dysplay: "flex", alignItems: "center" }}>
-        <Button variant="primary" onClick={this.handleBackClick}>
-          Primary
-        </Button>{" "}
-      </div>;
     }
   }
 }

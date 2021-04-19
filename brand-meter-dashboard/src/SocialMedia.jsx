@@ -12,14 +12,20 @@ const options = {
 class SocialMedia extends React.Component {
   render() {
     return (
-      <div style={{ display: "flex", alignItems: "center" }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          flexDirection: "column",
+        }}
+      >
+        <Button variant="primary" onClick>
+          Primary
+        </Button>{" "}
         <TableauReport
           url="https://public.tableau.com/views/prootypt/Dashboard1?:language=en&:display_count=y&:origin=viz_share_link"
           options={options}
         />
-        <Button variant="primary" onClick>
-          Primary
-        </Button>{" "}
       </div>
     );
   }
